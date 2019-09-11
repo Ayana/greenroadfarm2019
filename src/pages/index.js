@@ -49,8 +49,12 @@ const VisualWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -100px;
-  display: flex;
   color: #fff;
+  .visual-wrap {
+    display: flex;
+    height: 100%;
+    border-bottom: 15px solid rgba(255,255,255,0.8);
+  }
   .fade-in {
     opacity:0
     animation:fadeIn ease-in 1;
@@ -77,7 +81,10 @@ const VisualWrapper = styled.div`
   .fade-in.eighteen {  animation-delay: .95s;}
   .fade-in.nineteen {  animation-delay: 1s;}
   .fade-in.twenty {  animation-delay: 1.05s;}
-  .fade-in.caption {  animation-delay: 1.2s;}
+  .fade-in.twentyone {  animation-delay: 1.1s;}
+  .fade-in.twentytwo {  animation-delay: 1.15s;}
+  .fade-in.twentythree {  animation-delay: 1.2s;}
+  .fade-in.caption {  animation-delay: 1.4s;}
   @keyframes fadeIn {
   from {
     opacity: 0;
@@ -92,6 +99,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="グリーンロードファーム" />
     <VisualWrapper>
+      <div className="visual-wrap">
       <div
         style={{
           maxWidth: '800px',
@@ -106,30 +114,34 @@ const IndexPage = () => (
         <span className="fade-in three">j</span>
         <span className="fade-in four">o</span>
         <span className="fade-in five">y</span>
-        <span className="fade-in six"> S</span>
-        <span className="fade-in seven">e</span>
-        <span className="fade-in eight">a</span>
-        <span className="fade-in nine">s</span>
-        <span className="fade-in ten">o</span>
-        <span className="fade-in eleven">n</span>
-        <span className="fade-in twelve">a</span>
-        <span className="fade-in thirteen">l</span>
-        <span className="fade-in fourteen"> F</span>
-        <span className="fade-in fifteen">r</span>
-        <span className="fade-in sixteen">u</span>
-        <span className="fade-in seventeen">i</span>
-        <span className="fade-in eighteen">t</span>
-        <span className="fade-in nineteen">s</span>
-        <span className="fade-in twenty">!</span>
+        <span className="fade-in six"> o</span>
+        <span className="fade-in seven">u</span>
+        <span className="fade-in eight">r</span>
+        <span className="fade-in nine"> S</span>
+        <span className="fade-in ten">e</span>
+        <span className="fade-in eleven">a</span>
+        <span className="fade-in twelve">s</span>
+        <span className="fade-in thirteen">o</span>
+        <span className="fade-in fourteen">n</span>
+        <span className="fade-in fifteen">a</span>
+        <span className="fade-in sixteen">l</span>
+        <span className="fade-in seventeen"> F</span>
+        <span className="fade-in eighteen">r</span>
+        <span className="fade-in nineteen">u</span>
+        <span className="fade-in twenty">i</span>
+        <span className="fade-in twentyone">t</span>
+        <span className="fade-in twentytwo">s</span>
+        <span className="fade-in twentythree">!</span>
         </p>
-      <p className="fade-in caption" style={{fontSize: '1.1rem',fontWeight: 'bold',}}>旬の味と自然を満喫できる信州・松本のフルーツ農園です</p>
+      <p className="fade-in caption" style={{fontSize: '1.05rem',fontWeight: 'bold',}}>旬の味と自然を満喫できる信州・松本のフルーツ農園です</p>
+      </div>
       </div>
     </VisualWrapper>
 
     <AboutWrapper id="about" className="sec-about">
-      <div className="container">
+      <div className="container narrow">
         <h2 className="font-display">ABOUT</h2>
-        <p>GreanRoadFarm（グリーンロードファーム）は、長野県松本市の里山にあるフルーツ農園です。
+        <p className="lead narrow">GreanRoadFarm（グリーンロードファーム）は、長野県松本市の里山にあるフルーツ農園です。<br />
   あんずやワッサーなどの果樹を植えることで、荒廃した農地を活用し、旬の味や豊かな自然を楽しめる地域づくりを目指しています。</p>
         <div className="about-item">
           <h3>荒廃した土地を活用したフルーツ農園です</h3>
@@ -158,9 +170,9 @@ const IndexPage = () => (
 
     <FruitWrapper id="fruit" className="sec-fruit">
       <div className="fruit-wave">
-      <div className="container">
+      <div className="container narrow">
         <h2 className="font-display">OUR FRUITS</h2>
-        <p className="lead">グリーンロードファームで栽培しているフルーツは、あんずとワッサーの2種類。<br />
+        <p className="lead narrow">グリーンロードファームで栽培しているフルーツは、あんずとワッサーの2種類。<br />
   どちらも抜群のおいしさですが手に入れにくいフルーツ。ぜひ生の味をお楽しみください。</p>
         <div className="fruit-item">
           {/* <Images /> */}
@@ -168,7 +180,7 @@ const IndexPage = () => (
           <div>
             <h4>穫れたてを生で食べるのが最高の贅沢</h4>
             <p>あんずは収穫時期が短く、痛みが早いため、生あんずは市場にあまり多くは出回りません。そのため、生で食べたことがない人も多いはず。</p>
-            <p>収穫したての生あんずのおいしさは格別です。生の味わいを楽しんで、さらに、ジャムやお菓子、お酒として味わえる、一度に二度も三度も楽しめるフルーツです。</p>
+            <p>収穫したての生あんずのおいしさは格別です。生の味わいを堪能した、さらに、ジャムやお菓子、お酒として味わえる、一度に二度も三度も楽しめます。</p>
             <p>グリーンロードファームでは、あんずの中でも大きく甘味が強い品種を選んで栽培しています</p>
           </div>
         </div>
@@ -186,7 +198,7 @@ const IndexPage = () => (
     </FruitWrapper>
 
     <LocationWrapper id="location" className="sec-location">
-      <div className="container">
+      <div className="container narrow">
         <h2 className="font-display">LOCATION</h2>
         <div>
           <p>グリーンロードファーム<br />
