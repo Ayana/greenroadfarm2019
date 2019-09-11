@@ -36,6 +36,12 @@ module.exports = {
         key: process.env.AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE,
         address: `Boston, MA`
       },
-    }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
   ],
 }

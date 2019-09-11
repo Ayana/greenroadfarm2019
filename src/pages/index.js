@@ -1,9 +1,10 @@
 import React from "react"
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
-import Background from "../images/t_visual_img02.jpg"
+import Social from "../components/social"
+import Background from "../images/visual_img01.jpg"
 import SEO from "../components/seo"
 import styled from "styled-components"
 
@@ -15,6 +16,26 @@ const AboutWrapper = styled.div`
   }
   .about-item {
     padding: 3em 0 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    .about-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 600px;
+    }
+    .about-box {
+      background: rgba(255,255,255,0.8);
+      position: relative;
+      padding: 4em 4em 3em;
+      max-width: 600px;
+      margin-top: 140px;
+      margin-bottom: 6em;
+      h3 {
+        margin-bottom: 1.6em;
+      }
+    }
   }
  @media (min-width: 750px) {
   }
@@ -36,7 +57,50 @@ const FruitWrapper = styled.div`
   }
   .fruit-item {
     padding: 3em 0 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    .fruit-ttl-wrap {
+      position: absolute;
+      right: 20px;
+      font-size: 12rem;
+      top: 20px;
+    }
+    .fruit-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 600px;
+    }
+    .fruit-box {
+      background: rgba(255,255,255,0.8);
+      padding: 5em 5em 3em;
+      max-width: 600px;
+      margin-top: 140px;
+      margin-bottom: 6em;
+      position: relative;
+      .fruit-box-inner {
+        position: relative;
+        h4 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5em;
+          line-height: 1.4;
+        }
+      }
+    }
   }
+  .fruit-item.right {
+    justify-content: flex-start;
+    .fruit-ttl-wrap {
+      left: 20px;
+      right: inherit;
+    }
+    .fruit-img {
+      right: 0;
+      left: inherit;
+    }
+  }
+  
   @media (min-width: 750px) {
   }
   .fruit-wave-b {
@@ -104,7 +168,7 @@ const VisualWrapper = styled.div`
 `;
 
 
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
     <SEO title="グリーンロードファーム" />
     <VisualWrapper>
@@ -142,7 +206,7 @@ const IndexPage = () => (
         <span className="fade-in twentytwo">s</span>
         <span className="fade-in twentythree">!</span>
         </p>
-      <p className="fade-in caption" style={{fontSize: '1.05rem',fontWeight: 'bold',}}>旬の味と自然を満喫できる信州・松本のフルーツ農園です</p>
+      <p className="fade-in caption font-min" style={{fontSize: '1.05rem',fontWeight: 'bold',}}>旬の味と自然を満喫できる信州・松本のフルーツ農園です</p>
       </div>
       </div>
     </VisualWrapper>
@@ -152,30 +216,45 @@ const IndexPage = () => (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,192L60,165.3C120,139,240,85,360,90.7C480,96,600,160,720,170.7C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,186.7C840,192,960,160,1080,160C1200,160,1320,192,1380,208L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> */}
       </div>
-      <div className="container narrow">
+      <div className="container">
         <h2 className="font-display">ABOUT</h2>
         <p className="lead narrow">GreanRoadFarm（グリーンロードファーム）は、長野県松本市の里山にあるフルーツ農園です。<br />
   あんずやワッサーなどの果樹を植えることで、荒廃した農地を活用し、旬の味や豊かな自然を楽しめる地域づくりを目指しています。</p>
         <div className="about-item">
-          <h3>荒廃した土地を活用したフルーツ農園です</h3>
-          <div>
-            <p>グリーンロードファームの農園は、利用されなくなり荒廃し始めた土地を活用しています。そのため、当農園をご利用・ご来園いただくことが、耕作放棄地活用・持続可能な地域づくりへの協力となります。</p>
-            <p>当農園は、グリーンロードファーム会員とオーナー会員によって運営されています。会員が、草刈り・剪定・摘果・消毒等の管理することで、収穫シーズンには旬のフルーツを楽しんでいただくことができます。</p>
+          <div className="about-img">
+            <Image fluid={props.data.about1.childImageSharp.fluid} />
+          </div>
+          <div className="about-box">
+            <h3 className="font-min">荒廃した土地を活用したフルーツ農園です</h3>
+            <div>
+              <p>グリーンロードファームの農園は、利用されなくなり荒廃し始めた土地を活用しています。そのため、当農園をご利用・ご来園いただくことが、耕作放棄地活用・持続可能な地域づくりへの協力となります。</p>
+              <p>当農園は、グリーンロードファーム会員とオーナー会員によって運営されています。会員が、草刈り・剪定・摘果・消毒等の管理することで、収穫シーズンには旬のフルーツを楽しんでいただくことができます。</p>
+            </div>
           </div>
         </div>
         <div className="about-item">
-          <h3>長野県だからこそ味わえるフルーツです</h3>
-          <div>
-            <p>グリーンロードファームで現在栽培しているフルーツは、長野県での生産量が日本一の杏（あんず）、長野県生まれのワッサーの2種類です。</p>
-            <p>どちらも長野県では身近ですが、市場に出回る量が少ないフルーツです。そんなフルーツを、旬の一番おいしい時期に食べる生あんず、生ワッサーは、生産地だからこそ味わえる贅沢です。</p>
-            <p>今後、多くの実ができる収穫シーズンには数量限定にて販売も行う予定です。ぜひ、会員のみなさんは旬の時期にご来園のうえ、生フルーツを味わってみてください。</p>
+          <div className="about-img">
+            <Image fluid={props.data.about2.childImageSharp.fluid} />
+          </div>
+          <div className="about-box">
+            <h3 className="font-min">長野県だからこそ味わえるフルーツです</h3>
+            <div>
+              <p>グリーンロードファームで現在栽培しているフルーツは、長野県での生産量が日本一の杏（あんず）、長野県生まれのワッサーの2種類です。</p>
+              <p>どちらも長野県では身近ですが、市場に出回る量が少ないフルーツです。そんなフルーツを、旬の一番おいしい時期に食べる生あんず、生ワッサーは、生産地だからこそ味わえる贅沢です。</p>
+              <p>今後、多くの実ができる収穫シーズンには数量限定にて販売も行う予定です。ぜひ、会員のみなさんは旬の時期にご来園のうえ、生フルーツを味わってみてください。</p>
+            </div>
           </div>
         </div>
         <div className="about-item">
-          <h3>自然豊かな信州の里山です</h3>
-          <div>
-            <p>グリーンロードファームがある長野県松本市は、昼と夜の寒暖の差が大きく、さらに農園がある里山は南向きで粘土質。この環境が果樹栽培に非常に適しています。また、自然豊かでアルプスの山々が見ることができる農園からの景色は非常に気持ちのよいものです。</p>
-            <p>ご来園の際は、フルーツだけでなく、豊かな自然と美しい景色をお楽しみください。</p>
+          <div className="about-img">
+            <Image fluid={props.data.about3.childImageSharp.fluid} />
+          </div>
+          <div className="about-box">
+            <h3 className="font-min">自然豊かな信州の里山です</h3>
+            <div>
+              <p>グリーンロードファームがある長野県松本市は、昼と夜の寒暖の差が大きく、さらに農園がある里山は南向きで粘土質。この環境が果樹栽培に非常に適しています。また、自然豊かでアルプスの山々が見ることができる農園からの景色は非常に気持ちのよいものです。</p>
+              <p>ご来園の際は、フルーツだけでなく、豊かな自然と美しい景色をお楽しみください。</p>
+            </div>
           </div>
         </div>
       </div>
@@ -183,27 +262,39 @@ const IndexPage = () => (
 
     <FruitWrapper id="fruit" className="sec-fruit">
       <div className="fruit-wave">
-      <div className="container narrow">
+      <div className="container">
         <h2 className="font-display">OUR FRUITS</h2>
         <p className="lead narrow">グリーンロードファームで栽培しているフルーツは、あんずとワッサーの2種類。<br />
   どちらも抜群のおいしさですが手に入れにくいフルーツ。ぜひ生の味をお楽しみください。</p>
         <div className="fruit-item">
-          {/* <Images /> */}
-          <h3>あんず / Apricot</h3>
-          <div>
-            <h4>穫れたてを生で食べるのが最高の贅沢</h4>
-            <p>あんずは収穫時期が短く、痛みが早いため、生あんずは市場にあまり多くは出回りません。そのため、生で食べたことがない人も多いはず。</p>
-            <p>収穫したての生あんずのおいしさは格別です。生の味わいを堪能した、さらに、ジャムやお菓子、お酒として味わえる、一度に二度も三度も楽しめます。</p>
-            <p>グリーンロードファームでは、あんずの中でも大きく甘味が強い品種を選んで栽培しています</p>
+          <div className="fruit-img">
+            <Image fluid={props.data.fruitApricot.childImageSharp.fluid} />
+          </div>
+          <div className="fruit-box">
+            <div className="fruit-ttl-wrap">
+              <h3 className="font-min vertical">あんず</h3>
+            </div>
+            <div className="fruit-box-inner">
+              <h4 className="font-min">穫れたてを生で食べるのが最高の贅沢</h4>
+              <p>あんずは収穫時期が短く、痛みが早いため、生あんずは市場にあまり多くは出回りません。そのため、生で食べたことがない人も多いはず。</p>
+              <p>収穫したての生あんずのおいしさは格別です。生の味わいを堪能した、さらに、ジャムやお菓子、お酒として味わえる、一度に二度も三度も楽しめます。</p>
+              <p>グリーンロードファームでは、あんずの中でも大きく甘味が強い品種、おひさまコット、ニコニコット、信州サワーの3種類を生産しています。</p>
+            </div>
           </div>
         </div>
         <div className="fruit-item">
-          {/* <Images /> */}
-          <h3>ワッサー / Wasser</h3>
-          <div>
-            <h4>地元ファン多し！信州生まれの絶品フルーツ</h4>
-            <p>ワッサーは、桃×ネクタリンを掛け合わせた長野県生まれのフルーツ。長野県での知名度は高いのですが、県外ではまだまだ出荷量が少ない、おすすめ新フルーツです。</p>
-            <p>桃の甘味とネクタリンの酸味がちょうどよーく混ざった絶妙なバランスと、とろける食感で、口の中においしさが広がります。ぜひこの新しい味わいを体験してみてください。</p>
+          <div className="fruit-img">
+            <Image fluid={props.data.fruitWasser.childImageSharp.fluid} />
+          </div>
+          <div className="fruit-box">
+            <div className="fruit-ttl-wrap">
+              <h3 className="font-min vertical">ワッサー</h3>
+            </div>
+            <div className="fruit-box-inner">
+              <h4 className="font-min">地元ファン多し！<br />信州生まれの絶品フルーツ</h4>
+              <p>ワッサーは、桃とネクタリンを掛け合わせた長野県生まれのフルーツ。長野県での知名度は高いのですが、県外ではまだまだ出荷量が少ない、おすすめ新フルーツです。</p>
+              <p>桃の甘味とネクタリンの酸味がちょうどよーく混ざった絶妙なバランスと、とろける食感で、口の中においしさが広がります。ぜひこの新しい味わいを体験してみてください。</p>
+            </div>
           </div>
         </div>
       </div>
@@ -231,10 +322,54 @@ const IndexPage = () => (
         </div>
       </div>
     </LocationWrapper>
+
+    <Social />
+
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    about1: file(relativePath: { eq: "about_img_01.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    about2: file(relativePath: { eq: "about_img_02.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    about3: file(relativePath: { eq: "about_img_03.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fruitApricot: file(relativePath: { eq: "fruit_img_apricot.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fruitWasser: file(relativePath: { eq: "fruit_img_wasser.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
 
 // export const pageQuery = graphql`
 //   query LocationQuery {
