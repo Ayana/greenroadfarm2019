@@ -1,4 +1,5 @@
 import React from "react"
+// import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -7,7 +8,11 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const AboutWrapper = styled.div`
-  padding: 3em 0;
+  padding: 3em 0 8em;
+  .about-wave {
+    margin-top: -280px;
+    margin-bottom: -80px;
+  }
   .about-item {
     padding: 3em 0 0;
   }
@@ -22,29 +27,33 @@ const FruitWrapper = styled.div`
     background-color: #E7E8E3;
     border-top-right-radius: 1000px 80px;
     border-top-left-radius: 1000px 80px;
-    border-bottom: 15px solid rgba(255, 255, 255, 0.31);
+    // border-bottom: 15px solid rgba(255, 255, 255, 0.31);
     margin-left: -100px;
     margin-right: -100px;
     padding-left: 100px;
     padding-right: 100px;
-    padding: 3em 0;
+    padding: 7em 0 12em;
   }
   .fruit-item {
     padding: 3em 0 0;
   }
   @media (min-width: 750px) {
   }
+  .fruit-wave-b {
+    margin-top: -300px;
+    margin-bottom: -20px;
+  }
 `;
 
 const LocationWrapper = styled.div`
-  padding: 3em 0;
+  padding: 0 0 8em;
   @media (min-width: 750px) {
   }
 `;
 
 const VisualWrapper = styled.div`
   width: 100%;
-  height: 600px;
+  height: 800px;
   background-image: url(${Background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,7 +65,7 @@ const VisualWrapper = styled.div`
     border-bottom: 15px solid rgba(255,255,255,0.8);
   }
   .fade-in {
-    opacity:0
+    opacity:0;
     animation:fadeIn ease-in 1;
     animation-fill-mode:forwards;
     animation-duration:0.2s;
@@ -104,11 +113,11 @@ const IndexPage = () => (
         style={{
           maxWidth: '800px',
           margin: 'auto',
-          paddingTop: '70px',
+          paddingTop: '10px',
           textAlign: 'center',
         }} 
       >
-      <p className="font-script"　style={{fontSize: '2.8rem',marginBottom: '0.8em',}}>
+      <p className="font-script"　style={{fontSize: '2.8rem', lineHeight: '1.2',marginBottom: '0.4em',}}>
         <span className="fade-in one">E</span>
         <span className="fade-in two">n</span>
         <span className="fade-in three">j</span>
@@ -139,6 +148,10 @@ const IndexPage = () => (
     </VisualWrapper>
 
     <AboutWrapper id="about" className="sec-about">
+      <div className="about-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,192L60,165.3C120,139,240,85,360,90.7C480,96,600,160,720,170.7C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,186.7C840,192,960,160,1080,160C1200,160,1320,192,1380,208L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> */}
+      </div>
       <div className="container narrow">
         <h2 className="font-display">ABOUT</h2>
         <p className="lead narrow">GreanRoadFarm（グリーンロードファーム）は、長野県松本市の里山にあるフルーツ農園です。<br />
@@ -195,6 +208,12 @@ const IndexPage = () => (
         </div>
       </div>
       </div>
+      <div className="fruit-wave-b">
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,224L40,192C80,160,160,96,240,74.7C320,53,400,75,480,112C560,149,640,203,720,192C800,181,880,107,960,74.7C1040,43,1120,53,1200,74.7C1280,96,1360,128,1400,144L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg> */}
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,96L60,112C120,128,240,160,360,149.3C480,139,600,85,720,58.7C840,32,960,32,1080,37.3C1200,43,1320,53,1380,58.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> */}
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,96L40,85.3C80,75,160,53,240,48C320,43,400,53,480,90.7C560,128,640,192,720,213.3C800,235,880,213,960,176C1040,139,1120,85,1200,85.3C1280,85,1360,139,1400,165.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg> */}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,192L30,186.7C60,181,120,171,180,176C240,181,300,203,360,224C420,245,480,267,540,256C600,245,660,203,720,181.3C780,160,840,160,900,176C960,192,1020,224,1080,240C1140,256,1200,256,1260,245.3C1320,235,1380,213,1410,202.7L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+      </div>
     </FruitWrapper>
 
     <LocationWrapper id="location" className="sec-location">
@@ -216,3 +235,23 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+// export const pageQuery = graphql`
+//   query LocationQuery {
+//     allLocationData {
+//       edges {
+//         node {
+//           results {
+//             geometry {
+//               location_type
+//               location {
+//                 lat
+//                 lng
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

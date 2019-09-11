@@ -28,8 +28,14 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-source-googlemaps-geocoding',
+      options: {
+        // key: 'AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE',
+        // address: '1036 Okadashimookada, Matsumoto, Nagano 390-0313, Japan'
+        key: process.env.AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE,
+        address: `Boston, MA`
+      },
+    }
   ],
 }

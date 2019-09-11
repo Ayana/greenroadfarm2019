@@ -14,13 +14,30 @@ const NavWrapper = styled.div`
 		}
 		.nav-links {
 			a {
-				padding: 10px;
 				font-weight: bold;
 				color: #585858;
+				transition: .3s;
+				&:hover {
+					opacity: 0.6;
+				}
 			}
 		}
 	}
-  @media (min-width: 750px) {
+  @media (min-width: 751px) {
+		.nav-links {
+			margin-right: -20px;
+			a {
+				padding: 20px;
+			}
+		}
+  }
+  @media (max-width: 750px) {
+		.nav-links {
+			margin-right: -10px;
+			a {
+				padding: 10px;
+			}
+		}
   }
 `;
 
