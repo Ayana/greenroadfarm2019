@@ -9,99 +9,138 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const AboutWrapper = styled.div`
-  padding: 3em 0 8em;
-  .about-wave {
-    margin-top: -280px;
-    margin-bottom: -80px;
-  }
-  .about-item {
-    padding: 3em 0 0;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    .about-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 600px;
+  @media (min-width: 750px) {
+    padding: 3em 0 8em;
+    .about-wave {
+      margin-top: -280px;
+      margin-bottom: -80px;
     }
-    .about-box {
-      background: rgba(255,255,255,0.8);
+    .about-item {
+      padding: 3em 0 0;
       position: relative;
-      padding: 4em 4em 3em;
-      max-width: 600px;
-      margin-top: 140px;
-      margin-bottom: 6em;
-      h3 {
-        margin-bottom: 1.6em;
+      display: flex;
+      justify-content: flex-end;
+      .about-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 600px;
+      }
+      .about-box {
+        background: rgba(255,255,255,0.8);
+        position: relative;
+        padding: 4em 4em 3em;
+        max-width: 600px;
+        margin-top: 140px;
+        margin-bottom: 6em;
+        h3 {
+          margin-bottom: 1.6em;
+        }
       }
     }
   }
- @media (min-width: 750px) {
+ @media (max-width: 750px) {
+    padding: 3em 0 8em;
+    .about-wave {
+      margin-top: -130px;
+      margin-bottom: -40px;
+    }
+    .about-item {
+      .about-box {
+        h3 {
+          margin: 1.6em 0 1em;
+          line-height: 1.5;
+        }
+      }
+    }
   }
 `;
 
 const FruitWrapper = styled.div`
   overflow: hidden;
   width: 100%;
-  .fruit-wave {
-    background-color: #E7E8E3;
-    border-top-right-radius: 1000px 80px;
-    border-top-left-radius: 1000px 80px;
-    // border-bottom: 15px solid rgba(255, 255, 255, 0.31);
-    margin-left: -100px;
-    margin-right: -100px;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding: 7em 0 12em;
-  }
-  .fruit-item {
-    padding: 3em 0 0;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    .fruit-ttl-wrap {
-      position: absolute;
-      right: 20px;
-      font-size: 12rem;
-      top: 20px;
+  @media (min-width: 751px) {
+    .fruit-wave {
+      background-color: #E7E8E3;
+      border-top-right-radius: 1000px 80px;
+      border-top-left-radius: 1000px 80px;
+      margin-left: -100px;
+      margin-right: -100px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding: 7em 0 12em;
     }
-    .fruit-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 600px;
-    }
-    .fruit-box {
-      background: rgba(255,255,255,0.8);
-      padding: 5em 5em 3em;
-      max-width: 600px;
-      margin-top: 140px;
-      margin-bottom: 6em;
+    .fruit-item {
+      padding: 3em 0 0;
       position: relative;
-      .fruit-box-inner {
+      display: flex;
+      justify-content: flex-end;
+      .fruit-ttl-wrap {
+        position: absolute;
+        right: 20px;
+        font-size: 12rem;
+        top: 20px;
+      }
+      .fruit-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 600px;
+      }
+      .fruit-box {
+        background: rgba(255,255,255,0.8);
+        padding: 5em 5em 3em;
+        max-width: 600px;
+        margin-top: 140px;
+        margin-bottom: 6em;
         position: relative;
-        h4 {
-          font-size: 1.5rem;
-          margin-bottom: 1.5em;
-          line-height: 1.4;
+        .fruit-box-inner {
+          position: relative;
+          h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5em;
+            line-height: 1.4;
+          }
         }
       }
     }
-  }
-  .fruit-item.right {
-    justify-content: flex-start;
-    .fruit-ttl-wrap {
-      left: 20px;
-      right: inherit;
-    }
-    .fruit-img {
-      right: 0;
-      left: inherit;
+    .fruit-item.right {
+      .fruit-ttl-wrap {
+        left: 20px;
+        right: inherit;
+      }
+      .fruit-img {
+        right: 0;
+        left: inherit;
+      }
     }
   }
   
-  @media (min-width: 750px) {
+  @media (max-width: 750px) {
+    .fruit-wave {
+      background-color: #E7E8E3;
+      border-top-right-radius: 500px 80px;
+      border-top-left-radius: 500px 80px;
+      margin-left: -10px;
+      margin-right: -10px;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding: 3em 0 16em;
+    }
+    .fruit-item {
+      .fruit-ttl-wrap {
+        padding: 2em 0 0;
+      }
+      .fruit-img {
+      }
+      .fruit-box {
+        .fruit-box-inner {
+          h4 {
+            line-height: 1.5;
+          }
+        }
+      }
+    }
   }
   .fruit-wave-b {
     margin-top: -300px;
@@ -110,14 +149,22 @@ const FruitWrapper = styled.div`
 `;
 
 const LocationWrapper = styled.div`
-  padding: 0 0 8em;
-  @media (min-width: 750px) {
+  @media (min-width: 751px) {
+    padding: 0 0 8em;
+  }
+  @media (max-width: 750px) {
+    padding: 0 0 5em;
   }
 `;
 
 const VisualWrapper = styled.div`
+  @media (min-width: 751px) {
+    height: 800px;
+  }
+  @media (max-width: 750px) {
+    height: 500px;
+  }
   width: 100%;
-  height: 800px;
   background-image: url(${Background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -177,7 +224,7 @@ const IndexPage = props => (
         style={{
           maxWidth: '800px',
           margin: 'auto',
-          paddingTop: '10px',
+          padding: '10px 15px',
           textAlign: 'center',
         }} 
       >

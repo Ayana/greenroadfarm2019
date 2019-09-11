@@ -32,10 +32,18 @@ const NavWrapper = styled.div`
 		}
   }
   @media (max-width: 750px) {
-		.nav-links {
-			margin-right: -10px;
-			a {
-				padding: 10px;
+		.nav-wrap {
+			display: block;
+			img {
+				max-width: 180px;
+			}
+			.nav-links {
+				margin-right: -10px;
+				margin-top: 5px;
+				text-align: center;
+				a {
+					padding: 10px;
+				}
 			}
 		}
   }

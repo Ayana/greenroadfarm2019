@@ -53,7 +53,10 @@ const HeaderWrapper = styled.div`
       }
     }
   }
-  @media (min-width: 750px) {
+  @media (max-width: 750px) {
+    .wave-wrap {
+      // top: -15%;
+    }
   }
 `;
 

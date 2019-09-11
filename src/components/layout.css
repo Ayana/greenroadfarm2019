@@ -676,13 +676,13 @@ a {
 p {
   line-height: 1.7;
 }
-.vertical {
-  font-size: 5rem;
-  color: #dcdbd5;
-  writing-mode: vertical-rl;
-}
+@media only screen and (min-width: 751px) {
+  .vertical {
+    font-size: 5rem;
+    color: #dcdbd5;
+    writing-mode: vertical-rl;
+  }
 
-@media only screen and (min-width: 750px) {
   .container {
     margin: 0 auto;
     max-width: 960px;
@@ -698,9 +698,12 @@ p {
     margin-bottom: 5em;
   }
 }
-@media only screen and (max-width: 749px) {
+@media only screen and (max-width: 750px) {
   .container {
-    padding: 0px 1.0875rem 1.45rem;
+    padding: 0px 20px 1.45rem;
+  }
+  iframe {
+    width: 100%;
   }
 }
 
