@@ -9,12 +9,10 @@ const HeaderWrapper = styled.div`
     overflow: hidden;
     height: 100%;
     width: 100%;
-    top: 0;
-    z-index: -1;
+    top: -10%;
     .waves {
       position: absolute;
-      background: rgba(120, 255, 255, .75);
-      z-index: -1;
+      background: rgba(255, 255, 255, 0.85);
     }
     .w-one {
       width: 5800px;
@@ -27,26 +25,26 @@ const HeaderWrapper = styled.div`
       animation: funcRotate 28s infinite linear;
     }
     .w-two {
-      width: 2800px;
-      height: 2800px;
+      width: 3800px;
+      height: 3850px;
       top: 0;
       left: 50%;
-      margin-left: -1300px;
-      margin-top: -2650px;
-      border-radius: 48%;
-      opacity: .5;
-      animation: funcRotate 35s infinite linear;
-    }
-    .w-left {
-      opacity: .5;
-      width: 100%;
-      height: 160px;
-      top: 0;
-      left: -400px;
+      margin-left: -1500px;
+      margin-top: -3660px;
       border-radius: 50%;
+      animation: funcRotate 29s infinite linear;
+    }
+    .w-three {
+      width: 3800px;
+      height: 3850px;
+      top: 0;
+      left: 50%;
+      margin-left: -2300px;
+      margin-top: -3670px;
+      border-radius: 50%;
+      animation: funcRotate 32s infinite linear;
     }
     .w-right {
-      opacity: .5;
       width: 100%;
       height: 160px;
       top: 0;
@@ -69,12 +67,12 @@ const HeaderWrapper = styled.div`
 const Header = () => (
   <HeaderWrapper>
     <div className="wave-wrap">
-      <div className="waves w-left"></div>
-      <div className="waves w-right"></div>
       <div className="waves w-one"></div>
-      {/* <div className="waves w-two"></div> */}
+      <div className="waves w-two"></div>
+      <div className="waves w-three"></div>
+      {/* <div className="waves w-right"></div> */}
     </div>
-    <header>
+    <header style={{position:'relative',}}>
       <Nav className="nav-wrap" />
     </header>
   </HeaderWrapper>

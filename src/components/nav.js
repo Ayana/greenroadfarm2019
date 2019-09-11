@@ -15,6 +15,8 @@ const NavWrapper = styled.div`
 		.nav-links {
 			a {
 				padding: 10px;
+				font-weight: bold;
+				color: #585858;
 			}
 		}
 	}
@@ -28,10 +30,10 @@ const Nav = () => {
 			<div className="container">
 				<div className="nav-wrap">
 					<h1><Logo /></h1>
-					<div className="nav-links">
-						<a href="#about">About</a>
-						<a href="#fruit">Our Fruits</a>
-						<a href="#location">Location</a>
+					<div className="nav-links font-display">
+						<a href="#about">ABOUT</a>
+						<a href="#fruit">FRUITS</a>
+						<a href="#location">LOCATION</a>
 					</div>
 				</div>
 			</div>

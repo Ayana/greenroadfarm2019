@@ -3,7 +3,7 @@ import logo from '../images/logo.svg'
 
 const Logo = () => {
 	return (
-		<div>
+		<div className="font-logo">
 			<img
 				style={{
 					marginBottom: 0,
@@ -12,6 +12,7 @@ const Logo = () => {
 				src={logo}
 				alt="Green Road Farm"
 			/>
+			{/* Green Road Farm */}
 		</div>
 	)
 }

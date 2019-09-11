@@ -617,9 +617,38 @@ pre tt:after {
 }
 
 
-/* Custom Style */
+/* Custom Style -------------------- */
+
+/* Font Style */
+@import url('https://fonts.googleapis.com/css?family=Kosugi|Noto+Serif+JP|Courgette|Averia+Serif+Libre|Caveat|Staatliches|Fira+Sans|Patua+One|Just+Me+Again+Down+Here|Satisfy&display=swap');
+
+body {
+  background-color: #f9f9f9;
+  font-family: 'Open Sans', Arial, Roboto, "Droid Sans", "游ゴシック体", "Yu Gothic", YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  /* font-family: 'Kosugi', sans-serif; */
+}
+.font-min {
+  font-family: 'Noto Serif JP', "ヒラギノ明朝", "Hiragino Mincho", serif;
+}
+.font-script {
+  font-family: 'Courgette', cursive;
+  /* font-family: 'Satisfy', cursive; */
+/* font-family: 'Just Me Again Down Here', cursive; */
+}
+.font-display {
+  /* font-family: 'Fira Sans', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.08em;
+}
+
+/* Basic Style */
 h1, h2, h3, h4 {
   text-align: center;
+}
+h2 {
+  font-size: 2.6rem;
+  color: #57AD57;
+  padding: 1em 0;
 }
 
 
@@ -643,12 +672,16 @@ a {
   text-decoration: none;
 }
 
+
 @media only screen and (min-width: 750px) {
   .container {
     margin: 0 auto;
     max-width: 960px;
     padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
+  }
+  .lead {
+    text-align: center;
   }
 }
 @media only screen and (max-width: 749px) {

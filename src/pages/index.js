@@ -2,36 +2,134 @@ import React from "react"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
+import Background from "../images/t_visual_img02.jpg"
 import SEO from "../components/seo"
+import styled from "styled-components"
+
+const AboutWrapper = styled.div`
+  padding: 3em 0;
+  .about-item {
+    padding: 3em 0 0;
+  }
+ @media (min-width: 750px) {
+  }
+`;
+
+const FruitWrapper = styled.div`
+  overflow: hidden;
+  width: 100%;
+  .fruit-wave {
+    background-color: #E7E8E3;
+    border-top-right-radius: 1000px 80px;
+    border-top-left-radius: 1000px 80px;
+    border-bottom: 15px solid rgba(255, 255, 255, 0.31);
+    margin-left: -100px;
+    margin-right: -100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding: 3em 0;
+  }
+  .fruit-item {
+    padding: 3em 0 0;
+  }
+  @media (min-width: 750px) {
+  }
+`;
+
+const LocationWrapper = styled.div`
+  padding: 3em 0;
+  @media (min-width: 750px) {
+  }
+`;
+
+const VisualWrapper = styled.div`
+  width: 100%;
+  height: 600px;
+  background-image: url(${Background});
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+  display: flex;
+  color: #fff;
+  .fade-in {
+    opacity:0
+    animation:fadeIn ease-in 1;
+    animation-fill-mode:forwards;
+    animation-duration:0.2s;
+  }
+  .fade-in.one {  animation-delay: 0.1s;}
+  .fade-in.two {  animation-delay: .15s;}
+  .fade-in.three {  animation-delay: .2s;}
+  .fade-in.four{  animation-delay: .25s}
+  .fade-in.five {  animation-delay: .3s;}
+  .fade-in.six {  animation-delay: .35s;}
+  .fade-in.seven {  animation-delay: .4s}
+  .fade-in.eight {  animation-delay: .45s;}
+  .fade-in.nine {  animation-delay: .5s;}
+  .fade-in.ten {  animation-delay: .55s;}
+  .fade-in.eleven {  animation-delay: .6s;}
+  .fade-in.twelve {  animation-delay: .65s;}
+  .fade-in.thirteen {  animation-delay: .7s;}
+  .fade-in.fourteen {  animation-delay: .75s;}
+  .fade-in.fifteen {  animation-delay: .8s;}
+  .fade-in.sixteen {  animation-delay: .85s;}
+  .fade-in.seventeen {  animation-delay: .9s;}
+  .fade-in.eighteen {  animation-delay: .95s;}
+  .fade-in.nineteen {  animation-delay: 1s;}
+  .fade-in.twenty {  animation-delay: 1.05s;}
+  .fade-in.caption {  animation-delay: 1.2s;}
+  @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 
 const IndexPage = () => (
   <Layout>
     <SEO title="グリーンロードファーム" />
-    <div
-      className="container"
-      style={{
-        textAlign: 'center',
-      }}
-      >
+    <VisualWrapper>
       <div
         style={{
           maxWidth: '800px',
           margin: 'auto',
+          paddingTop: '70px',
+          textAlign: 'center',
         }} 
       >
-      <p style={{fontSize: '2.8rem',lineHeight: '1.3',}}>旬の味と自然を満喫できる<br />信州・松本のフルーツ農園です。</p>
-      <p>グリーンロードファームは、信州・松本の里山にあるフルーツ農園です。<br />
-      フルーツ栽培に最適なこの地で育った旬のフルーツを楽しみ、ときには第二の故郷として収穫体験や豊かな自然をお楽しみください。</p>
+      <p className="font-script"　style={{fontSize: '2.8rem',marginBottom: '0.8em',}}>
+        <span className="fade-in one">E</span>
+        <span className="fade-in two">n</span>
+        <span className="fade-in three">j</span>
+        <span className="fade-in four">o</span>
+        <span className="fade-in five">y</span>
+        <span className="fade-in six"> S</span>
+        <span className="fade-in seven">e</span>
+        <span className="fade-in eight">a</span>
+        <span className="fade-in nine">s</span>
+        <span className="fade-in ten">o</span>
+        <span className="fade-in eleven">n</span>
+        <span className="fade-in twelve">a</span>
+        <span className="fade-in thirteen">l</span>
+        <span className="fade-in fourteen"> F</span>
+        <span className="fade-in fifteen">r</span>
+        <span className="fade-in sixteen">u</span>
+        <span className="fade-in seventeen">i</span>
+        <span className="fade-in eighteen">t</span>
+        <span className="fade-in nineteen">s</span>
+        <span className="fade-in twenty">!</span>
+        </p>
+      <p className="fade-in caption" style={{fontSize: '1.1rem',fontWeight: 'bold',}}>旬の味と自然を満喫できる信州・松本のフルーツ農園です</p>
       </div>
-    </div>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      {/* <Image /> */}
-    </div>
+    </VisualWrapper>
 
-    <section className="sec-about">
+    <AboutWrapper id="about" className="sec-about">
       <div className="container">
-        <h2>About</h2>
-        <p>GreanRoadFarm（グリーンロードファーム）は、長野県松本市岡田地区で里山の活性化を目指してつくられたフルーツ農園です。
+        <h2 className="font-display">ABOUT</h2>
+        <p>GreanRoadFarm（グリーンロードファーム）は、長野県松本市の里山にあるフルーツ農園です。
   あんずやワッサーなどの果樹を植えることで、荒廃した農地を活用し、旬の味や豊かな自然を楽しめる地域づくりを目指しています。</p>
         <div className="about-item">
           <h3>荒廃した土地を活用したフルーツ農園です</h3>
@@ -56,19 +154,21 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
-    </section>
+    </AboutWrapper>
 
-    <section className="sec-fruit">
+    <FruitWrapper id="fruit" className="sec-fruit">
+      <div className="fruit-wave">
       <div className="container">
-        <h2>Our Fruits</h2>
-        <p>グリーンロードファームで栽培しているフルーツは、現在、あんずとワッサーの2種類です。
+        <h2 className="font-display">OUR FRUITS</h2>
+        <p className="lead">グリーンロードファームで栽培しているフルーツは、あんずとワッサーの2種類。<br />
   どちらも抜群のおいしさですが手に入れにくいフルーツ。ぜひ生の味をお楽しみください。</p>
         <div className="fruit-item">
           {/* <Images /> */}
           <h3>あんず / Apricot</h3>
           <div>
             <h4>穫れたてを生で食べるのが最高の贅沢</h4>
-            <p>あんずは収穫時期が短く、痛みが早いため、生あんずは市場にあまり多くは出回りません。そのため、生で食べたことがない人も多いはず。だからこそ、収穫したての生あんずのおいしさは格別！生の味わいを楽しんで、ジャムやお菓子、お酒として味わえる、一度に二度も三度も楽しめるフルーツです。</p>
+            <p>あんずは収穫時期が短く、痛みが早いため、生あんずは市場にあまり多くは出回りません。そのため、生で食べたことがない人も多いはず。</p>
+            <p>収穫したての生あんずのおいしさは格別です。生の味わいを楽しんで、さらに、ジャムやお菓子、お酒として味わえる、一度に二度も三度も楽しめるフルーツです。</p>
             <p>グリーンロードファームでは、あんずの中でも大きく甘味が強い品種を選んで栽培しています</p>
           </div>
         </div>
@@ -77,16 +177,17 @@ const IndexPage = () => (
           <h3>ワッサー / Wasser</h3>
           <div>
             <h4>地元ファン多し！信州生まれの絶品フルーツ</h4>
-            <p>ワッサーは、桃×ネクタリンを掛け合わせた長野県生まれのフルーツ。長野県での知名度は高いのですが、県外ではまだまだ出荷量が少ない、おすすめ新フルーツです</p>
-            <p>桃の甘味とネクタリンの酸味がちょうどよーく混ざった絶妙なバランスと、とろける食感で、口の中においしさが広がります。この味わいは本当は教えたくないほどのおいしさ！ぜひこの新しい味わいを体験してみてください。</p>
+            <p>ワッサーは、桃×ネクタリンを掛け合わせた長野県生まれのフルーツ。長野県での知名度は高いのですが、県外ではまだまだ出荷量が少ない、おすすめ新フルーツです。</p>
+            <p>桃の甘味とネクタリンの酸味がちょうどよーく混ざった絶妙なバランスと、とろける食感で、口の中においしさが広がります。ぜひこの新しい味わいを体験してみてください。</p>
           </div>
         </div>
       </div>
-    </section>
+      </div>
+    </FruitWrapper>
 
-    <section className="sec-location">
+    <LocationWrapper id="location" className="sec-location">
       <div className="container">
-        <h2>Location</h2>
+        <h2 className="font-display">LOCATION</h2>
         <div>
           <p>グリーンロードファーム<br />
           長野県松本市岡田下岡田1036</p>
@@ -98,7 +199,7 @@ const IndexPage = () => (
   ※駐車スペースから農園までは徒歩となります。初めてお越しの方はご案内しますので、事前にご連絡ください。</p>
         </div>
       </div>
-    </section>
+    </LocationWrapper>
   </Layout>
 )
 
