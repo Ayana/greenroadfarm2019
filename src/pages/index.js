@@ -40,7 +40,7 @@ const AboutWrapper = styled.div`
     }
   }
  @media (max-width: 750px) {
-    padding: 3em 0 8em;
+    padding: 3em 0;
     .about-wave {
       margin-top: -130px;
       margin-bottom: -40px;
@@ -123,9 +123,13 @@ const FruitWrapper = styled.div`
       border-top-left-radius: 500px 80px;
       margin-left: -10px;
       margin-right: -10px;
-      padding-left: 100px;
+      padding-left: 10px;
       padding-right: 100px;
       padding: 3em 0 16em;
+      .container {
+        padding-right: 30px;
+        padding-left: 30px;
+      }
     }
     .fruit-item {
       .fruit-ttl-wrap {
@@ -134,6 +138,9 @@ const FruitWrapper = styled.div`
       .fruit-img {
       }
       .fruit-box {
+        h3 {
+          font-size: 2rem;
+        }
         .fruit-box-inner {
           h4 {
             line-height: 1.5;
@@ -260,6 +267,7 @@ const IndexPage = props => (
 
     <AboutWrapper id="about" className="sec-about">
       <div className="about-wave">
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,288L80,277.3C160,267,320,245,480,245.3C640,245,800,267,960,266.7C1120,267,1280,245,1360,234.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,192L60,165.3C120,139,240,85,360,90.7C480,96,600,160,720,170.7C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f9" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,186.7C840,192,960,160,1080,160C1200,160,1320,192,1380,208L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> */}
       </div>

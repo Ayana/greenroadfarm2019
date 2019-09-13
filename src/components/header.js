@@ -14,6 +14,16 @@ const HeaderWrapper = styled.div`
       position: absolute;
       background: rgba(255, 255, 255, 0.85);
     }
+    @keyframes funcRotate {
+      from { 
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  @media (mix-width: 751px) {
     .w-center {
       width: 5800px;
       height: 5820px;
@@ -44,18 +54,37 @@ const HeaderWrapper = styled.div`
       border-radius: 50%;
       animation: funcRotate 32s infinite linear;
     }
-    @keyframes funcRotate {
-      from { 
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
   }
   @media (max-width: 750px) {
-    .wave-wrap {
-      // top: -15%;
+    .w-center {
+      width: 2800px;
+      height: 2820px;
+      top: 0;
+      left: 50%;
+      margin-left: -1650px;
+      margin-top: -2620px;
+      border-radius: 50%;
+      animation: funcRotate 28s infinite linear;
+    }
+    .w-right {
+      width: 2800px;
+      height: 2820px;
+      top: 0;
+      left: 50%;
+      margin-left: -1280px;
+      margin-top: -2620px;
+      border-radius: 50%;
+      animation: funcRotate 29s infinite linear;
+    }
+    .w-left {
+      width: 1800px;
+      height: 1850px;
+      top: 0;
+      left: 50%;
+      margin-left: -800px;
+      margin-top: -1640px;
+      border-radius: 50%;
+      animation: funcRotate 32s infinite linear;
     }
   }
 `;
