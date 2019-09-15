@@ -23,36 +23,38 @@ const HeaderWrapper = styled.div`
       }
     }
   }
-  @media (mix-width: 751px) {
-    .w-center {
-      width: 5800px;
-      height: 5820px;
-      top: 0;
-      left: 50%;
-      margin-left: -2950px;
-      margin-top: -5620px;
-      border-radius: 50%;
-      animation: funcRotate 28s infinite linear;
-    }
-    .w-right {
-      width: 5800px;
-      height: 5820px;
-      top: 0;
-      left: 50%;
-      margin-left: -2580px;
-      margin-top: -5620px;
-      border-radius: 50%;
-      animation: funcRotate 29s infinite linear;
-    }
-    .w-left {
-      width: 3800px;
-      height: 3850px;
-      top: 0;
-      left: 50%;
-      margin-left: -2300px;
-      margin-top: -3640px;
-      border-radius: 50%;
-      animation: funcRotate 32s infinite linear;
+  @media (min-width: 751px) {
+    .wave-wrap {
+      .w-center {
+        width: 5800px;
+        height: 5820px;
+        top: 0;
+        left: 50%;
+        margin-left: -2950px;
+        margin-top: -5620px;
+        border-radius: 50%;
+        animation: funcRotate 28s infinite linear;
+      }
+      .w-right {
+        width: 5800px;
+        height: 5820px;
+        top: 0;
+        left: 50%;
+        margin-left: -2580px;
+        margin-top: -5620px;
+        border-radius: 50%;
+        animation: funcRotate 29s infinite linear;
+      }
+      .w-left {
+        width: 3800px;
+        height: 3850px;
+        top: 0;
+        left: 50%;
+        margin-left: -2300px;
+        margin-top: -3640px;
+        border-radius: 50%;
+        animation: funcRotate 32s infinite linear;
+      }
     }
   }
   @media (max-width: 750px) {

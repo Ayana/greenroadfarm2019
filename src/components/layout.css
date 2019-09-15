@@ -647,22 +647,26 @@ font-family: 'Roboto Slab', serif;
 h1, h2, h3, h4 {
   text-align: center;
 }
-h2 {
-  font-size: 2.3rem;
-  /* color: #57AD57; */
-  padding: 1em 0;
-}
 
 
 /* Media Query */
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 751px) {
   html {
     font-size: 100%;
   }
+  h2 {
+    font-size: 2.3rem;
+    padding: 1em 0;
+  }
 }
-@media only screen and (max-width: 749px) {
+@media only screen and (max-width: 750px) {
   html {
-    font-size: 100%;
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 2.2rem;
+    padding: 1em 0;
+    margin-bottom: 0;
   }
 }
 

@@ -12,7 +12,7 @@ const AboutWrapper = styled.div`
   @media (min-width: 750px) {
     padding: 3em 0 8em;
     .about-wave {
-      margin-top: -280px;
+      margin-top: -24%;
       margin-bottom: -80px;
     }
     .about-item {
@@ -31,7 +31,7 @@ const AboutWrapper = styled.div`
         position: relative;
         padding: 4em 4em 3em;
         max-width: 600px;
-        margin-top: 140px;
+        margin-top: 120px;
         margin-bottom: 6em;
         h3 {
           margin-bottom: 1.6em;
@@ -144,6 +144,7 @@ const FruitWrapper = styled.div`
         .fruit-box-inner {
           h4 {
             line-height: 1.5;
+            font-size: 1.2rem;
           }
         }
       }
@@ -170,17 +171,17 @@ const VisualWrapper = styled.div`
   }
   @media (max-width: 750px) {
     height: 500px;
+    padding-top: 20px;
   }
   width: 100%;
   background-image: url(${Background});
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -100px;
+  margin-top: -110px;
   color: #fff;
   .visual-wrap {
     display: flex;
     height: 100%;
-    border-bottom: 15px solid rgba(255,255,255,0.8);
   }
   .fade-in {
     opacity:0;
@@ -295,8 +296,8 @@ const IndexPage = props => (
             <h3 className="font-min">長野県だからこそ味わえるフルーツです</h3>
             <div>
               <p>グリーンロードファームで現在栽培しているフルーツは、長野県での生産量が日本一の杏（あんず）、長野県生まれのワッサーの2種類です。</p>
-              <p>どちらも長野県では身近ですが、市場に出回る量が少ないフルーツです。そんなフルーツを、旬の一番おいしい時期に食べる生あんず、生ワッサーは、生産地だからこそ味わえる贅沢です。</p>
-              <p>今後、多くの実ができる収穫シーズンには数量限定にて販売も行う予定です。ぜひ、会員のみなさんは旬の時期にご来園のうえ、生フルーツを味わってみてください。</p>
+              <p>どちらも長野県では身近ですが、市場に出回る量が少ないフルーツ。そんなあんずとワッサーを、旬の一番おいしい時期に食べられるのは、生産地だからこそ味わえる贅沢です。</p>
+              <p>会員のみなさんは、ぜひ旬の時期にご来園のうえ、生フルーツを味わってみてください。</p>
             </div>
           </div>
         </div>
@@ -319,8 +320,7 @@ const IndexPage = props => (
       <div className="fruit-wave">
       <div className="container">
         <h2 className="font-display">OUR FRUITS</h2>
-        <p className="lead narrow">グリーンロードファームで栽培しているフルーツは、あんずとワッサーの2種類。<br />
-  どちらも抜群のおいしさですが手に入れにくいフルーツ。ぜひ生の味をお楽しみください。</p>
+        <p className="lead narrow">グリーンロードファームで栽培しているフルーツは、あんずとワッサーの2種類です。ぜひ生の味をお楽しみください。</p>
         <div className="fruit-item">
           <div className="fruit-img">
             <Image fluid={props.data.fruitApricot.childImageSharp.fluid} />
@@ -347,8 +347,8 @@ const IndexPage = props => (
             </div>
             <div className="fruit-box-inner">
               <h4 className="font-min">地元ファン多し！<br />信州生まれの絶品フルーツ</h4>
-              <p>ワッサーは、桃とネクタリンを掛け合わせた長野県生まれのフルーツ。長野県での知名度は高いのですが、県外ではまだまだ出荷量が少ない、おすすめ新フルーツです。</p>
-              <p>桃の甘味とネクタリンの酸味がちょうどよーく混ざった絶妙なバランスと、とろける食感で、口の中においしさが広がります。ぜひこの新しい味わいを体験してみてください。</p>
+              <p>ワッサーは、桃とネクタリンを掛け合わせた長野県生まれのフルーツ。長野県での知名度は高いのですが、県外ではまだまだ出荷量が少ないフルーツです。</p>
+              <p>桃の甘味とネクタリンの酸味がちょうどよーく混ざった絶妙なバランスと、堅めの果肉、なのにみずみずしい。ぜひこの味わいを体験してみてください。</p>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ const NavWrapper = styled.div`
 				margin-top: 5px;
 				text-align: center;
 				a {
-					padding: 10px;
+					padding: 10px 15px;
 				}
 			}
 		}
