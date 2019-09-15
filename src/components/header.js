@@ -12,20 +12,31 @@ const HeaderWrapper = styled.div`
     top: -10%;
     .waves {
       position: absolute;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 1);
     }
   }
   @media (min-width: 751px) {
     .wave-wrap {
-      .w-center {
-        width: 5800px;
-        height: 5820px;
+      opacity: 0.8;
+      .w-left {
+        width: 3800px;
+        height: 3850px;
         top: 0;
         left: 50%;
-        margin-left: -2950px;
-        margin-top: -5620px;
+        margin-left: -2300px;
+        margin-top: -3660px;
         border-radius: 50%;
-        animation: funcRotate 28s infinite linear;
+        animation: funcRotate 8s infinite linear;
+      }
+      .w-center {
+        width: 4800px;
+        height: 4830px;
+        top: 0;
+        left: 50%;
+        margin-left: -2460px;
+        margin-top: -4640px;
+        border-radius: 50%;
+        animation: funcRotate 10s infinite linear;
       }
       .w-right {
         width: 5800px;
@@ -33,19 +44,9 @@ const HeaderWrapper = styled.div`
         top: 0;
         left: 50%;
         margin-left: -2580px;
-        margin-top: -5620px;
+        margin-top: -5630px;
         border-radius: 50%;
-        animation: funcRotate 29s infinite linear;
-      }
-      .w-left {
-        width: 3800px;
-        height: 3850px;
-        top: 0;
-        left: 50%;
-        margin-left: -2300px;
-        margin-top: -3640px;
-        border-radius: 50%;
-        animation: funcRotate 32s infinite linear;
+        animation: funcRotate 8s infinite linear;
       }
     }
     @keyframes funcRotate {
@@ -58,10 +59,20 @@ const HeaderWrapper = styled.div`
     }
   }
   @media (max-width: 750px) {
+    .w-left {
+      opacity: 0.8;
+      width: 1800px;
+      height: 1810px;
+      top: 0;
+      left: 50%;
+      margin-left: -1000px;
+      margin-top: -1630px;
+      border-radius: 50%;
+    }
     .w-center {
       opacity: 0.8;
       width: 1800px;
-      height: 1820px;
+      height: 1810px;
       top: 0;
       left: 50%;
       margin-left: -870px;
@@ -71,21 +82,11 @@ const HeaderWrapper = styled.div`
     .w-right {
       opacity: 0.8;
       width: 1800px;
-      height: 1820px;
+      height: 1810px;
       top: 0;
       left: 50%;
       margin-left: -780px;
       margin-top: -1625px;
-      border-radius: 50%;
-    }
-    .w-left {
-      opacity: 0.8;
-      width: 1800px;
-      height: 1820px;
-      top: 0;
-      left: 50%;
-      margin-left: -1000px;
-      margin-top: -1630px;
       border-radius: 50%;
     }
   }
