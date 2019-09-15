@@ -14,14 +14,6 @@ const HeaderWrapper = styled.div`
       position: absolute;
       background: rgba(255, 255, 255, 0.85);
     }
-    @keyframes funcRotate {
-      from { 
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
   }
   @media (min-width: 751px) {
     .wave-wrap {
@@ -56,37 +48,45 @@ const HeaderWrapper = styled.div`
         animation: funcRotate 32s infinite linear;
       }
     }
+    @keyframes funcRotate {
+      from { 
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
   @media (max-width: 750px) {
     .w-center {
-      width: 2800px;
-      height: 2820px;
+      opacity: 0.8;
+      width: 1800px;
+      height: 1820px;
       top: 0;
       left: 50%;
-      margin-left: -1650px;
-      margin-top: -2620px;
+      margin-left: -870px;
+      margin-top: -1620px;
       border-radius: 50%;
-      animation: funcRotate 28s infinite linear;
     }
     .w-right {
-      width: 2800px;
-      height: 2820px;
+      opacity: 0.8;
+      width: 1800px;
+      height: 1820px;
       top: 0;
       left: 50%;
-      margin-left: -1280px;
-      margin-top: -2620px;
+      margin-left: -780px;
+      margin-top: -1625px;
       border-radius: 50%;
-      animation: funcRotate 29s infinite linear;
     }
     .w-left {
+      opacity: 0.8;
       width: 1800px;
-      height: 1850px;
+      height: 1820px;
       top: 0;
       left: 50%;
-      margin-left: -800px;
-      margin-top: -1640px;
+      margin-left: -1000px;
+      margin-top: -1630px;
       border-radius: 50%;
-      animation: funcRotate 32s infinite linear;
     }
   }
 `;
