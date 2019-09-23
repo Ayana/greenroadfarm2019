@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import Layout from "../components/layout"
+import Map from "../components/map"
 import Social from "../components/social"
 import Background from "../images/visual_img01.jpg"
 import SEO from "../components/seo"
@@ -366,6 +367,7 @@ const IndexPage = props => (
       <div className="container narrow">
         <h2 className="font-display">LOCATION</h2>
         <div>
+          <Map />
           <p>グリーンロードファーム<br />
           長野県松本市岡田下岡田1036</p>
           <p>

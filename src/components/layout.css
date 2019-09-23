@@ -680,6 +680,15 @@ a {
 p {
   line-height: 1.7;
 }
+.ico-pin {
+  background-image: url(../images/ico_map.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 35px;
+  margin-top: -35px;
+}
+
 @media only screen and (min-width: 751px) {
   .vertical {
     font-size: 5rem;
