@@ -29,6 +29,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-M66T3FP",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    {
       resolve: 'gatsby-source-googlemaps-geocoding',
       options: {
         // key: 'AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE',
