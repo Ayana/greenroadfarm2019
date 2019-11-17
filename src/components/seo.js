@@ -1,16 +1,9 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,6 +11,8 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            siteUrl
+            image
             author
           }
         }
@@ -25,50 +20,42 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const siteTitle = site.siteMetadata.title
+  const metaTitle = title || siteTitle
+  const siteDescription = description || site.siteMetadata.description
+  const siteUrl = site.siteMetadata.siteUrl
+  const ogpImage = site.siteMetadata.image
+  const siteAuthor = site.siteMetadata.author
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+      title={metaTitle}
+      defaultTitle={siteTitle}
+      >
+        {/* General tags */}
+        <meta name="image" content={siteUrl + ogpImage} />
+        <meta name="description" content={siteDescription} />
+
+        {/* OpenGraph tags */}
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:type" content="website" />
+
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content={siteUrl + ogpImage} />
+        <meta property="og:description" content={siteDescription} />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content={siteAuthor} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:image" content={siteUrl + ogpImage} />
+        <meta name="twitter:description" content={siteDescription} />
+         
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript" />
+    </Helmet>
   )
 }
 

@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `グリーンロードファーム`,
+    description: `グリーンロードファーム（GreenRoadFarm）は、旬の味と自然を満喫できる信州・松本のフルーツ農園です。`,
+    siteUrl: `https://greenroadfarm.org/`,
+    image: `images/img_ogp.png`,
+    author: `Ayaos`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,15 +38,15 @@ module.exports = {
         defaultDataLayer: { platform: "gatsby" },
       },
     },
-    {
-      resolve: 'gatsby-source-googlemaps-geocoding',
-      options: {
-        // key: 'AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE',
-        // address: '1036 Okadashimookada, Matsumoto, Nagano 390-0313, Japan'
-        key: process.env.AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE,
-        address: `Boston, MA`
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-googlemaps-geocoding',
+    //   options: {
+    //     // key: 'AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE',
+    //     // address: '1036 Okadashimookada, Matsumoto, Nagano 390-0313, Japan'
+    //     key: process.env.AIzaSyCsKwpWIDGkUZ2_Dfd39JkYuHXTjE5f8CE,
+    //     address: `Boston, MA`
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
