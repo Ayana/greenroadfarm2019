@@ -3,7 +3,7 @@ module.exports = {
     title: `グリーンロードファーム`,
     description: `グリーンロードファーム（GreenRoadFarm）は、旬の味と自然を満喫できる信州・松本のフルーツ農園です。`,
     siteUrl: `https://greenroadfarm.org/`,
-    image: `images/img_ogp.png`,
+    image: `/images/img_ogp.png`,
     author: `Ayaos`,
   },
   plugins: [
