@@ -17,7 +17,7 @@
     "gatsby-remark-responsive-iframe": "^2.2.16",
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-source-googlemaps-geocoding": "^1.0.0",
-    "gatsby-transformer-remark": "^2.6.22",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.14",
     "google-map-react": "^1.1.5",
     "prop-types": "^15.7.2",
